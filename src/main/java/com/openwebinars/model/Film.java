@@ -11,11 +11,11 @@ public class Film {
 	private long id;
 	private String title;
 	private List<String> genres;
-	private LocalDate year;
+	private String year;
 	
 	public Film() {}
 
-	public Film(long id, String title, List<String> genres, LocalDate year) {
+	public Film(long id, String title, List<String> genres, String year) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -47,11 +47,11 @@ public class Film {
 		this.genres = genres;
 	}
 
-	public LocalDate getYear() {
+	public String getYear() {
 		return year;
 	}
 
-	public void setYear(LocalDate year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 
