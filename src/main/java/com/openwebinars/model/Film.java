@@ -1,6 +1,6 @@
 package com.openwebinars.model;
 
-import java.time.LocalDate;
+
 import java.util.List;
 
 

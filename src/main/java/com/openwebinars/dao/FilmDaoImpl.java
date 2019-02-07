@@ -34,7 +34,7 @@ public class FilmDaoImpl implements FilmDao{
 	public void delete(long id) {
 		int index = getIndexOf(id);
 		if(index != -1)
-			films.remove(id);
+			films.remove(index);
 	}
 
 	@Override

@@ -30,9 +30,6 @@ public class FilmService {
 		return result;
 	}
 	
-	public Collection<Film> findByAllGenres(String... genres) {
-		return filmQueryServiceImpl.anyGenre(genres).exec();
-	}
 	
 	public Collection<Film> findByAllGenres (String...genres) {
 		return filmQueryServiceImpl.allGenres(genres).exec();
