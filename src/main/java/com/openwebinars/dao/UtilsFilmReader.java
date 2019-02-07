@@ -29,11 +29,11 @@ public class UtilsFilmReader {
 										
 				}).collect(Collectors.toList());
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Error de lectura del fichero de datos: imdb_data");
+			System.exit(-1);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Error de lectura del fichero de datos: imdb_data");
+			System.exit(-1);
 		}
 		
 		return result;

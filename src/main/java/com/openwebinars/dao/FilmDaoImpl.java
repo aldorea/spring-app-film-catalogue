@@ -16,7 +16,7 @@ public class FilmDaoImpl implements FilmDao{
 	
 	@PostConstruct
 	public void init() {
-		
+		peliculas = UtilsFilmReader.ReadFile(path, separator, listSeparator);
 	}
 
 	@Override
