@@ -25,8 +25,7 @@ public class UtilsFilmReader {
 				.skip(1)
 				.map(lines -> {
 						String[] values = lines.split(separator);
-						return new Film(Long.parseLong(values[0]), values[1], Arrays.asList(values[2].split(listSeparator)),
-								LocalDate.(values[3].toCharArray(), "yyyy"));
+						return new Film(Long.parseLong(values[0]), values[1], Arrays.asList(values[3].split(listSeparator)),values[2]);
 										
 				}).collect(Collectors.toList());
 		} catch (FileNotFoundException e) {
