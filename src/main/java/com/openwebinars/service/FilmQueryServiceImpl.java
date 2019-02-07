@@ -74,7 +74,7 @@ public class FilmQueryServiceImpl implements FilmQueryService {
 		
 	}
 
-	@Override	
+	@Override 	
 	public FilmQueryServiceImpl titleContains(String title) {
 		Predicate<Film> pTitleContains  = (film -> film.getTitle().toLowerCase().contains(title.toLowerCase()));
 		predicate = (predicate == null) ? pTitleContains : predicate.and(pTitleContains);
