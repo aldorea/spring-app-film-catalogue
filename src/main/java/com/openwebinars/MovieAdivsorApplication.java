@@ -11,8 +11,8 @@ public class MovieAdivsorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MovieAdivsorApplication.class, args);
-		
-		
+		MovieAdvisorRunApp runApp = new MovieAdvisorRunApp();
+		runApp.run(args);
 		
 	}
 

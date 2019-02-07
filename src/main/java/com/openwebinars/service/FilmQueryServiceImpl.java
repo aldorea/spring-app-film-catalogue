@@ -9,10 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.openwebinars.dao.FilmDao;
 import com.openwebinars.model.Film;
 
+@Service
 public class FilmQueryServiceImpl implements FilmQueryService {
 	
 	@Autowired
