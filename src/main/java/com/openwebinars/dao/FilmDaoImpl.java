@@ -31,9 +31,10 @@ public class FilmDaoImpl implements FilmDao{
 	}
 
 	@Override
-	public void delete() {
-		// TODO Auto-generated method stub
-		
+	public void delete(long id) {
+		int index = getIndexOf(id);
+		if(index != -1)
+			films.remove(id);
 	}
 
 	@Override
@@ -43,20 +44,21 @@ public class FilmDaoImpl implements FilmDao{
 	}
 
 	@Override
-	public List<Film> findAll() {
-		// TODO Auto-generated method stub
+	public List<Film> findAll() {	
 		return films;
 	}
 
 	@Override
-	public void edit() {
-		// TODO Auto-generated method stub
+	public void edit(Film film) {
+		int index = getIndexOf(film.getId());
+		if(index != -1)
+			films.set(index, film);
 		
 	}
 
 	@Override
-	public void insert() {
-		// TODO Auto-generated method stub
+	public void insert(Film film) {
+		films.add(film);
 		
 	}
 	
@@ -64,14 +66,14 @@ public class FilmDaoImpl implements FilmDao{
 		boolean encontrado = false;
 		int index = 0;
 		
-		while(!encontrado && index < films.size()) {
+		while(encontrado && index < films.size()) {
 			if(films.get(index).getId() == id)
 				encontrado = true;
 			else
 				index ++;
 		}
 		
-		return (encotrado) ? index : -1;
+		return (encontrado) ? index : -1;
 	}
 
 }

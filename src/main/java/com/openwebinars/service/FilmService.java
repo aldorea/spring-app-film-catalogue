@@ -15,7 +15,7 @@ public class FilmService {
 	FilmDao filmDao;
 	
 	@Autowired
-	FilmQueryService filmQueryService;
+	FilmQueryServiceImpl filmQueryServiceImpl;
 	
 	public Collection<String> findAllGennres() {
 		List<String> result;
@@ -31,23 +31,23 @@ public class FilmService {
 	}
 	
 	public Collection<Film> findByAllGenres(String... genres) {
-		return filmQueryService.anyGenre(genres).exec();
+		return filmQueryServiceImpl.anyGenre(genres).exec();
 	}
 	
 	public Collection<Film> findByAllGenres (String...genres) {
-		return filmQueryService.allGenres(genres).exec();
+		return filmQueryServiceImpl.allGenres(genres).exec();
 	}
 	
 	public Collection<Film> findByYear (String year) {
-		return filmQueryService.year(year).exec();
+		return filmQueryServiceImpl.year(year).exec();
 	}
 	
 	public Collection<Film> findBetweenYears (String from, String to) {
-		return filmQueryService.betweenYears(from, to).exec();
+		return filmQueryServiceImpl.betweenYears(from, to).exec();
 	}
 	
 	public Collection<Film> findByTitleContains (String title) {
-		return filmQueryService.titleContains(title).exec();
+		return filmQueryServiceImpl.titleContains(title).exec();
 	}
 	
 	public Collection<Film> findAll() {
